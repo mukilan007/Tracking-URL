@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%  block head  %} TRACK URL{%  endblock  %}</title>
+</head>
+<body>
+<h3>Tracking URL</h3>
+    <h4>END URL : <a href="{{ s_url.url }}">{{ s_url.url }}</a>  </h4><br>
+    <h2>Here the following redirected chain...</h2>
+<center>
+<table border="1">
+  <thead>
+        <tr>
+<!--       tr--- table row and td--- table data-->
+            <td>URL</td><td>Reason</td>
+        </tr>
+  </thead>
+  <tbody>
+  {%  for r in redi %}
+  <tr>
+      <td>{{ r.url }}</td>
+      <td>{{ r.reason }}</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+</center>
+<button>
+    <a href="/">HOME PAGE</a>
+</button>
+</body>
+</html>

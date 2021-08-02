@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%  block head  %} TRACK URL{%  endblock  %}</title>
+</head>
+<body>
+<center>
+<h2>Tracking URL</h2>
+<img src="{{ url_for('static',filename='Unknown') }}" width="250" height="250">
+
+    <p>Track URL where does link go and Follow the path of tiny URL, shortened links <br>Find it now! </p>
+    <form action = "/track" method="post">
+<!--        /track--- go to this API and post--- for fetch html data-->
+        <p>Enter URL</p>
+        <input type="url" name = "User_URL" placeholder="Enter URL to be track">
+<!--        name is a ID used to take the value-->
+        <input type="submit" value="ENTER">
+        <button>
+            <a href="/helpline">HELPLINE</a>
+<!--               a herf="/helpline"--- when user click the button go to helpline API and /helpline as rule-->
+        </button>
+    </form>
+
+</center>
+</body>
+</html>
